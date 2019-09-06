@@ -23,8 +23,9 @@ class ViewController: UIViewController {
             case 14 : resultScreen.text = "*"
             case 15 : resultScreen.text = "-"
             case 16 : resultScreen.text = "+"
+            
                 
-            default:break
+            default: break
                 
             }
                 performingMath = true
@@ -32,16 +33,18 @@ class ViewController: UIViewController {
         }else if sender.tag == 17
         {
             switch operation  {
-            case 13 : resultScreen.text = String(numberOnScreen / previousNumber)
-            case 14 : resultScreen.text = String(numberOnScreen * previousNumber)
-            case 15 : resultScreen.text = String(numberOnScreen - previousNumber)
-            case 16 : resultScreen.text = String(numberOnScreen + previousNumber)
+            
+            case 13 : resultScreen.text = String(previousNumber / numberOnScreen)
+            case 14 : resultScreen.text = String(previousNumber * numberOnScreen)
+            case 15 : resultScreen.text = String(previousNumber - numberOnScreen)
+            case 16 : resultScreen.text = String(previousNumber + numberOnScreen)
                 
             default:break
                 
             }
             
         }else if sender.tag == 10{
+            
             resultScreen.text = ""
             numberOnScreen = 0
             previousNumber = 0
